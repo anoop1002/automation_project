@@ -223,7 +223,7 @@ async function fetchAndConvertToPDF() {
     const googleSheetInstance = google.sheets({ version: "v4", auth: authClientObject });
 
     // Google Sheet ID
-    const spreadsheetId = "19kUCaanHSUVIG1CxKLSbjVj0X9VfE0FsuQsnTtcW3e4";
+    const spreadsheetId = process.env.SPREADSHEET_ID;
 
     // Get data from the sheet
     const response = await googleSheetInstance.spreadsheets.values.get({
